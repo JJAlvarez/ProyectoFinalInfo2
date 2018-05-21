@@ -1,18 +1,16 @@
 package com.unis.javieralvarez.connectfour.models;
 
-/**
- * Created by Javier Alvarez on 22/04/2018.
- */
-
 public class Move implements IMove {
 
     public int X;
     public int Y;
+    public int player;
 
     @Override
-    public void setPosittion(int x, int y) {
+    public void setPosittion(int x, int y, int player) {
         this.X = x;
         this.Y = y;
+        this.player = player;
     }
 
     @Override
@@ -24,4 +22,11 @@ public class Move implements IMove {
     public int getYPosition() {
         return this.Y;
     }
+
+    @Override
+    public int getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(int player) { this.player = player; }
 }

@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">ConnectFour</string>
-    <string name="game_winner">El ganador es</string>
+    <string name="game_winner">El ganador es </string>
 </resources>

@@ -6,7 +6,8 @@ package com.unis.javieralvarez.connectfour.models;
 
 public interface IMove {
 
-    void setPosittion(int x, int y);
+    void setPosittion(int x, int y, int player);
     int getXPosittion();
     int getYPosition();
+    int getPlayer();
 }

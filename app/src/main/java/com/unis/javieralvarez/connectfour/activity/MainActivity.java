@@ -1,17 +1,20 @@
 package com.unis.javieralvarez.connectfour.activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.unis.javieralvarez.connectfour.R;
-import com.unis.javieralvarez.connectfour.models.Game;
 import com.unis.javieralvarez.connectfour.models.IGame;
 import com.unis.javieralvarez.connectfour.presenter.IStartPresenter;
 import com.unis.javieralvarez.connectfour.presenter.StartPresenter;
 import com.unis.javieralvarez.connectfour.view.IStartView;
 
-public class MainActivity extends AppCompatActivity implements IStartView{
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+public class MainActivity extends AppCompatActivity implements IStartView {
 
     private IStartPresenter presenter;
 
@@ -19,17 +22,8 @@ public class MainActivity extends AppCompatActivity implements IStartView{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
         this.presenter = new StartPresenter(this);
-    }
-
-    @Override
-    public void showProgressBar() {
-
-    }
-
-    @Override
-    public void hideProgressBar() {
-
     }
 
     @Override
@@ -55,5 +49,18 @@ public class MainActivity extends AppCompatActivity implements IStartView{
     protected void onDestroy() {
         presenter.onDestroy();
         super.onDestroy();
+    }
+
+    @OnClick({R.id.btn_single, R.id.btn_pair, R.id.btn_dynamic})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.btn_single:
+                break;
+            case R.id.btn_pair:
+                startGame();
+                break;
+            case R.id.btn_dynamic:
+                break;
+        }
     }
 }

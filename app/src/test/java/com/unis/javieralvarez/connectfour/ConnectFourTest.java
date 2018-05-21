@@ -37,7 +37,7 @@ public class ConnectFourTest {
     public void check_make_move_change_turn() throws Exception {
         IGame game = new Game();
         game.startGame();
-        game.makeMove(0, 0);
+        game.makeMove(0);
         assertEquals(1, game.getTurn());
     }
 
@@ -46,9 +46,9 @@ public class ConnectFourTest {
         IGame game = new Game();
         ConnectFourGameActivity activity = new ConnectFourGameActivity();
         activity.startGame(game);
-        activity.makeMove(0,0);
+        activity.makeMove(0);
 
-        assertEquals(true, ((Game)activity.getGame()).Moves[0][0] != null);
+        assertEquals(true, ((Game)activity.getGame()).Moves[0][6] != null);
     }
 
     @Test
@@ -56,10 +56,18 @@ public class ConnectFourTest {
         IGame game = new Game();
         ConnectFourGameActivity activity = new ConnectFourGameActivity();
         activity.startGame(game);
-        activity.makeMove(0,0);
+        activity.makeMove(0);
 
         activity.restartGame();
 
         assertEquals(true, ((Game)activity.getGame()).Moves[0][0] == null);
+    }
+
+    @Test
+    public void CheckNoWinner() throws Exception {
+        IGame game = new Game();
+        game.startGame();
+        game.makeMove(0);
+        assertEquals(false, game.checkWinner());
     }
 }

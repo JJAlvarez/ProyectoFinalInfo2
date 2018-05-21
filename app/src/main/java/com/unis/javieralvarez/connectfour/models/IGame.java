@@ -9,7 +9,7 @@ public interface IGame extends Serializable {
     String getTurnPlayer();
     boolean checkWinner();
     void restartGame();
-    void makeMove(int x, int y);
+    int makeMove(int x);
     boolean checkValidMove(int x, int y);
     int getTurn();
 }

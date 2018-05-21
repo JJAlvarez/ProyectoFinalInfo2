@@ -8,11 +8,8 @@ import com.unis.javieralvarez.connectfour.models.IGame;
 
 public interface IConnectFourGameView {
 
-    void showProgressBar();
-    void hideProgressBar();
     void initializeGame();
-    void makeMove(int x, int y);
-    boolean checkMove(int x, int y);
+    int makeMove(int x);
     void showWinner();
     void restartGame();
     void exitGame();

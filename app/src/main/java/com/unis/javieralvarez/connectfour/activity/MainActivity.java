@@ -46,20 +46,25 @@ public class MainActivity extends AppCompatActivity implements IStartView {
     }
 
     @Override
+    public void launchManual() {
+        Intent intent = new Intent(this, TutorialActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
     protected void onDestroy() {
         presenter.onDestroy();
         super.onDestroy();
     }
 
-    @OnClick({R.id.btn_single, R.id.btn_pair, R.id.btn_dynamic})
+    @OnClick({R.id.btn_pair, R.id.btn_manual})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.btn_single:
-                break;
             case R.id.btn_pair:
                 startGame();
                 break;
-            case R.id.btn_dynamic:
+            case R.id.btn_manual:
+                launchManual();
                 break;
         }
     }

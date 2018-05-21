@@ -6,4 +6,5 @@ public interface IStartView {
 
     void startGame();
     void launchGame(IGame game);
+    void launchManual();
 }

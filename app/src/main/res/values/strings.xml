@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">ConnectFour</string>
     <string name="game_winner">El ganador es </string>
+    <string name="manual">Bienvenido!\n\nReglas del juego\n\nEl conecta 4 se juega en una rejilla vertical de 7 filas y 7 columnas.
+        Las filas están numeradas de abajo a arriba del 1 al 7, y las columnas de izquierda a
+        derecha de A a G. El objetivo es alinear 4 fichas de su color, horizontalmente,
+        verticalmente o en diagonal.\n\nDesarrollo del
+        juego\n\nCada jugador a su turno juega una ficha de su color en la columna de su elección.\n\nFísicamente,
+        la rejilla está dispuesta de forma vertical, de forma que las fichas son
+        insertadas en una ranura desde arriba y caen hasta la fila más baja no ocupada aún. Así, se
+        elige la columna donde se pone, pero no la fila; la ficha que se acaba de insertar cae
+        hasta la fila más baja aún disponible. Desde luego, no puede jugarse en una columna llena
+        conteniendo ya 7 fichas.</string>
 </resources>

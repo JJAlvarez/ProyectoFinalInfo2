@@ -35,16 +35,6 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/btn_single"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:background="@color/colorPrimaryMain"
-                android:padding="5dp"
-                android:text="Un jugador"
-                android:textColor="@color/white" />
-
-            <Button
                 android:id="@+id/btn_pair"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -53,18 +43,8 @@
                 android:background="@color/indigo"
                 android:padding="5dp"
                 android:text="Dos Jugadores"
-                android:textColor="@color/white" />
-
-            <Button
-                android:id="@+id/btn_dynamic"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:background="@color/colorPrimaryMain"
-                android:padding="5dp"
-                android:text="Dos Jugadores Tablero Dinamico"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:layout_marginBottom="20dp"/>
 
             <Button
                 android:id="@+id/btn_manual"
@@ -72,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
-                android:background="@color/indigo"
+                android:background="@color/colorPrimaryMain"
                 android:padding="5dp"
                 android:text="Manual de juego"
                 android:textColor="@color/white" />
